@@ -1,9 +1,7 @@
 body {
-    height: 100vh;
     margin: 0;
     display: flex;
     flex-direction: column;
-    gap: 20px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -39,16 +37,25 @@ li {
     margin-left: 100px;
 }
 
+.container {
+    background-image: url(./resources/background.jpg);
+    background-size: cover;
+    height: 550px;
+}
+
+
 .intro-container {
     display: flex;
-    gap: 30px;
-    height: 350px;
-    align-items: center;
+    gap: 20px;
+    height: 420px;
+    align-items: flex-end;
     justify-content: center;
 }
 
 .intro-image {
     height: 200px;
+    border: 5px solid white;
+    border-radius: 0.5em;
     &:hover {
         transform: scale(1.05);
         transition: all ease ;
@@ -84,8 +91,8 @@ button {
     display: inline-block;
     outline: 0;
     cursor: pointer;
-    padding: 10px 20px;
-    font-size: 20px;
+    padding: 5px 15px;
+    font-size: 16px;
     font-weight: 500;
     line-height: 20px;
     vertical-align: middle;
@@ -105,24 +112,29 @@ button {
     }
 }
 
-.container {
-    background-image: url(./resources/background.jpg);
-    background-size: cover;
-}
-
 .info-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 30px;
+    justify-content: center;
     text-align: center;
+    height: 600px;
+    background-image: linear-gradient(
+        rgba(255, 251, 251, 0.85), 
+        rgba(252, 248, 248, 0.85)
+      ),url(./resources/background2.jpg);
+    background-size: cover;
+    position: relative;
 }
 
 .info {
-    font-family: "Brush King";
-    font-size: 30px;
+    font-family: "Ninja";
+    margin-bottom: 30px;
+    font-size: 60px;
     background: linear-gradient(90deg, #FFD700 0%, #FF0000 100%);
+    -webkit-text-stroke:2px black;
     -webkit-background-clip: text;
+            background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -135,10 +147,48 @@ button {
     height: 300px;
     width: 180px;
     object-fit: cover;
+    border-radius: 0.5em;
+}
 
+img.shinobi {
+    border: 5px solid rgb(255, 102, 0);
+    &:hover {
+        transform: scale(1.05);
+        transition: all ease ;
+        border-radius: 5px;
+        box-shadow: 0 0 30px rgb(145, 139, 139);
+    }
+    margin-bottom: 10px;
+}
+
+.info-text {
+    font-family: "Cartoon";
+    font-size: 15px;
+}
+
+.quote-container {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.quote-content {
+    width: 450px;
+    background: rgba(172, 172, 172, 0.9);
+    padding: 15px;
+    border-radius: 0.5em;
+}
+
+
+@font-face {
+    font-family: "Ninja";
+    src: url(./resources/ninja-naruto.regular.ttf);
 }
 
 @font-face {
-    font-family: "Brush King";
-    src: url(./resources/Brush\ King.otf);
+    font-family: "Cartoon";
+    src: url(./resources/cartoon.ttf);
 }
